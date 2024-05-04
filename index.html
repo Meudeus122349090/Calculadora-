@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <title>js ate que emfim</title>
+</head>
+<style>
+  body{
+    text-align: center;
+
+    
+  }
+
+.e{
+  border:2px solid #333;
+  align-items: center;
+}
+input{
+  height:100px;
+  width:100px;
+  font-size: 50px;
+  outline-color: black;
+}
+div#res{
+  font-size:50px;
+  margin-left: px;
+  border: 2px solid #333;
+  display: inline-block;
+ 
+}
+div#es{
+  font-size:50px;
+  margin-left: px;
+  margin-top: -50px;
+  border: 2px solid #333;
+  display: inline-block;
+  
+}
+.idade input{
+  height:30px;
+  width:30px;
+  font-size: 20px;
+}
+
+</style>
+<body>
+  <h1>calculator</h1>         
+  <div id="res">result X</div>=<div id="es">result +</div>
+<div class="e">
+<input type="number" id="tx1">+
+<input type="number" id="tx2">
+<input type="button" value="=" onclick="so()">
+
+<input type="number" id="textn1">×
+<input type="number" id="textn2"/>
+<input type="button" value="=" onclick="somar()"/>
+
+</div>
+
+
+<script>
+   function somar(){
+     var tn1 = document.getElementById("textn1")
+     var tn2 = document.getElementById("textn2")
+     var n1 = Number(tn1.value)
+     var n2 = Number(tn2.value)
+     var s = n1 * n2
+     var res = document.querySelector("div#res")
+     res.innerHTML = s
+   }
+   function so(){
+     var t1 = document.getElementById("tx1")
+     var t2 = document.getElementById("tx2")
+     var nu = Number(t1.value)
+     var no = Number(t2.value)
+     var i = nu + no
+     var es = document.querySelector("div#es")
+     es.innerHTML = i
+   }
+   function idade(){
+   var name = document.getElementById("id")
+   let idad = document.getElementById("ida")
+   var s = Number(name.value);
+   idad.innerHTML = s
+   
+   }
+</script>
+</body>
+<div class="idade">
+idade <input type="number" id="id" onclick="idade()">
+ <div id="ida">idade</div>
+</div>
+</html>
